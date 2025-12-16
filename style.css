@@ -1,0 +1,602 @@
+@font-face {
+    font-family: 'akira';
+    src: url('fonts/Akira\ Expanded\ Demo.otf') format('opentype');
+    
+}
+
+@font-face {
+    font-family: 'cera pro';
+    src: url(fonts/Cera\ Pro\ Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'de valencia';
+    src: url(fonts/De\ Valencia.OTF) format('opentype');
+    font-weight: 50;
+}
+
+body {
+    font-family: 'akira', Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+/*BACKGROUND CSS*/
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/imagemask.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 100%;
+    z-index: 1;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container div {
+    position: absolute;
+    border-radius: 80%;
+    animation: gradient 10s infinite;
+}
+
+@keyframes gradient {
+    0%, 100% {
+        transform: scale(1) translate(0, 0);
+    }
+    50% {
+        transform: scale(1.3) translate(100px, 100px);
+    }
+}
+
+.container div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.container div:nth-child(2) {
+    width: 20%;
+    height: 10%;
+    background-color: #C1FD33;
+    bottom: 0;
+    left: 0;
+}
+
+.container div:nth-child(3) {
+    width: 30%;
+    height: 7%;
+    background-color: #ffffff;
+    bottom: 0;
+    right: 0;
+}
+
+.container div:nth-child(4) {
+    width: 20%;
+    height: 3%;
+    background-color: #C1FD33;
+    top: 0;
+    right: 0;
+}
+
+.container div:nth-child(5) {
+    width: 40%;
+    height: 3%;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(100px);
+}
+
+/*ULTIMATE INTRO*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main, footer {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+main {
+    font-family: 'akira';
+    padding: 20px 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/*MAINPAGE CSS*/
+
+header {
+    font-family: 'de valencia';
+    font-size: 29pt;
+    color: white;
+    padding: 25px 0;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 70px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight:normal;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav ul li a:hover {
+    text-shadow:0 0 50px #C1FD33,
+                0 0 20px #ffffff,
+                0 0 50px #C1FD33,
+                0 0 20px #ffffff,
+                0 0 50px #C1FD33,
+                0 0 20px #ffffff,
+                0 0 50px #C1FD33,
+                0 0 20px #ffffff,
+                0 0 50px #C1FD33;
+}
+
+header nav ul li img {
+    vertical-align: middle;
+    transition: transform 1s ease;
+}
+
+header nav ul li img:hover {
+    transform: scale(1.2);
+}
+
+main h1 {
+    font-size: 160pt;
+    margin: 0.5em 0;
+    transition: color 0.5s ease;
+}
+
+main h1:hover {
+    color: #C1FD33;
+}
+
+main h2 {
+    font-size: 160pt;
+    margin: 0.5em 0;
+    transition: color 0.5s ease;
+}
+
+main h2:hover {
+    color: #C1FD33;
+}
+
+main p {
+    font-size: 40pt;
+    margin: 0.5em 0;
+    color: #ffffff;
+}
+
+main p1 {
+    font-size: 96pt;
+    margin: 0.5em 0;
+    color: #ffffff;
+}
+
+main p2 {
+    font-size: 40pt;
+    margin: 0.5em 0;
+    color: #ffffff;
+}
+
+main p3 {
+    font-size: 96pt;
+    margin: 0.5em 0;
+    color: #ffffff;
+}
+
+.text-stroke {
+    color: black;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 
+        1px 1px 0 #ffffff, 
+        -1px -1px 0 #ffffff, 
+        -1px 1px 0 #ffffff, 
+        1px -1px 0 #ffffff;
+}
+
+.main-title {
+    position: absolute;
+    top: 15%;
+    left: 5%; 
+    transform: translateY(-50%);
+}
+
+.with{
+    position: absolute;
+    top: 528%;
+    left: 40%;
+    transform: translateY(-50%);
+}
+
+.purpose{
+    position: absolute;
+    top: 500%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.with1{
+    position: absolute;
+    top: 935%;
+    right: 38.5%;
+    transform: translateY(-50%);
+}
+
+.creating{
+    position: absolute;
+    top: 780%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.main-subtitle {
+    position: absolute;
+    top: 1080%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+footer {
+    font-family: 'cera pro';
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+}
+
+
+/*ABOUT ME CSS*/
+
+.im {
+    text-align: center;
+    font-size: 90pt;
+    color: white;
+    margin: 0;
+}
+
+.rasel {
+    text-align: center;
+    font-size: 120pt;
+    color: black;
+    -webkit-text-stroke: 1px #ffffff;
+     text-shadow: 
+        1px 1px 0 #ffffff, 
+        -1px -1px 0 #ffffff, 
+        -1px 1px 0 #ffffff, 
+        1px -1px 0 #ffffff;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.rasel:hover {
+    color: #C1FD33;
+}
+
+.about-details{
+    font-family: 'cera pro';
+    font-size: 15pt;
+    color: white;
+    text-align: center;
+    padding: 20px 0 ;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.simple{
+    text-align: center;
+    font-size: 120pt;
+    color: white;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+.simple:hover {
+    color: #C1FD33;
+}
+
+/*GALLERY CSS*/
+
+.gallery-title {
+    font-family: 'akira';
+    text-align: center;
+    font-size: 120pt;
+    margin: 20px 0;
+    color: black;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 
+        1px 1px 0 #ffffff, 
+        -1px -1px 0 #ffffff, 
+        -1px 1px 0 #ffffff, 
+        1px -1px 0 #ffffff;
+}
+
+.works-details{
+    font-family: 'cera pro';
+    font-size: 15pt;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.row-title {
+    font-family: 'de valencia';
+    font-weight: normal;
+    text-align: center;
+    font-size: 50pt;
+    padding: 20px;
+    color: white;
+    margin: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item-description {
+    font-family: 'cera pro';
+    font-size: 15pt;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    padding-bottom: 40px;
+}
+
+.gallery-item:hover .gallery-item-description {
+    opacity: 1;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #C1FD33;
+}
+
+.poster-gallery {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.poster-item {
+    width: 210mm;
+    height: 297mm;
+    padding-bottom: 0;
+}
+
+.banner-gallery {
+    grid-template-columns: repeat(1, 3fr);
+}
+
+.banner-item {
+    width: 1800px;
+    height: 745.45px;
+    padding-bottom: 0;
+}
+
+.gallery-subfooter{
+    font-family: 'cera pro';
+    font-size: 23pt;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 20px;
+}
+
+.gallery-subfooter a {
+    color: #C1FD33;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.gallery-subfooter a:hover {
+    text-shadow: 0 0 50px #C1FD33,
+                 0 0 20px #ffffff,
+                 0 0 50px #C1FD33,
+                 0 0 20px #ffffff;
+}
+
+.gallery-footer1 {
+    font-family: 'cera pro';
+    font-size: 13pt;
+    color: white;
+    text-align: center;
+    padding: 20px 0px 0px;
+}
+
+.gallery-footer2 {
+    font-family: 'cera pro';
+    font-size: 13pt;
+    color: white;
+    text-align: center;
+    padding: 20px 0px 0px;
+}
+
+/*MY BRAND CSS*/
+
+.presenting {
+    text-align: center;
+    font-size: 60pt;
+    color: black;
+    -webkit-text-stroke: 1px #ffffff;
+     text-shadow: 
+        1px 1px 0 #ffffff, 
+        -1px -1px 0 #ffffff, 
+        -1px 1px 0 #ffffff, 
+        1px -1px 0 #ffffff;
+    margin: 0;
+}
+
+.brand-logo {
+    text-align: center;
+}
+
+.we-do-gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*CONTACTS CSS*/
+
+.contact-main {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.contact-form-container {
+    width: 80%;
+}
+
+.floating-label {
+    position: relative;
+    margin: 20px 0;
+}
+
+.floating-label input,
+.floating-label textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16pt;
+    border: 2px solid #C1FD33;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #333;
+    color: white;
+}
+
+.floating-label textarea {
+    height: 150px;
+}
+
+.floating-label label {
+    font-family: 'cera pro';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 16pt;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+    top: -20px;
+    left: 15px;
+    font-size: 12pt;
+    color: #C1FD33;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    display: block;
+    width: 50%;
+    padding: 15px;
+    font-size: 16pt;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #C1FD33;
+}
